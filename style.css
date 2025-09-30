@@ -57,7 +57,7 @@ main {
 }
 
 article {
-  background: #e0e1dd url("../imagenes/img1.png") no-repeat;
+  background: #e0e1dd url("imagenes/img1.png") no-repeat;
   background-size: cover;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(13, 164, 235, 0.966);
