@@ -1,7 +1,8 @@
+
 body {
   background: #000;
   color: #fff;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'Audiowide', Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -9,7 +10,7 @@ body {
 h1 {
   color: #1896df;
   text-align: center;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'Orbitron', Arial, sans-serif;
   margin-bottom: 0.2em;
 }
 
@@ -76,8 +77,6 @@ article {
   width: 100%;
 }
 
-
-
 .tarjeta {
   background: #0a0000;
   border-radius: 12px;
@@ -123,4 +122,163 @@ footer {
   font-size: 0.95em;
   letter-spacing: 0.03em;
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.04);
+}
+
+
+#contacto {
+  margin-top: 4em;
+  margin-bottom: 6em;
+  text-align: center;
+}
+
+#contacto h2 {
+  color: #1896df;
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+#contacto p {
+  color: #4ea8de;
+  margin-bottom: 2em;
+}
+
+.contacto-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+  width: 100%;
+  max-width: 1000px;
+  margin: 2em auto;
+  padding: 20px;
+  border: 2px solid #4ea8de;
+  box-sizing: border-box;
+  background-color: #111;
+}
+
+
+.form-contacto {
+  background: #0a0000;
+  border: 1px solid #1c84e6;
+  border-radius: 10px;
+  padding: 1.5em;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  box-shadow: 0 2px 8px rgba(13, 164, 235, 0.3);
+  float: left;
+}
+
+.form-contacto label {
+  color: #4ea8de;
+  text-align: left;
+  font-weight: 600;
+}
+
+.form-contacto input,
+.form-contacto textarea {
+  padding: 0.5em;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background: #111;
+  color: #fff;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.form-contacto button {
+  background: #1896df;
+  color: #fff;
+  padding: 0.6em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.form-contacto button:hover {
+  background: #4ea8de;
+}
+
+.info-contacto {
+  max-width: 400px;
+  color: #fff;
+  text-align: left;
+  float: right;
+  padding: 20px;
+  border: 1px solid #4ea8de;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.info-contacto h3 {
+  color: #4ea8de;
+  margin-bottom: 0.8em;
+}
+
+.info-contacto p {
+  margin: 0.4em 0;
+}
+
+.info-contacto iframe {
+  width: 100%;
+  height: 250px;
+  border: 0;
+  border-radius: 10px;
+  margin-top: 1em;
+}
+
+
+.contacto-container::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
+table {
+  width: 100%;
+  max-width: 800px;
+  margin: 2em auto;
+  border-collapse: collapse;
+  background: #0a0000;
+  color: #fff;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+table caption {
+  caption-side: top;
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+  color: #1896df;
+  font-weight: bold;
+  text-align: center;
+}
+
+table th,
+table td {
+  border: 1px solid #1c84e6;
+  padding: 0.8em;
+  text-align: center;
+}
+
+table th {
+  background: #111;
+  color: #4ea8de;
+}
+
+@media (max-width: 768px) {
+  .contacto-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-contacto,
+  .info-contacto {
+    width: 100%;
+    max-width: 90%;
+    float: none;
+  }
 }
