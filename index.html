@@ -5,32 +5,35 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="style.css">
 		<link rel="shortcut icon" href="imagenes/logo1.png" type="image/x-icon">
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Orbitron:wght@500;700&display=swap"
+			rel="stylesheet">
 		<title>PowerTeam</title>
-
 	</head>
 	<body>
 		<header>
 			<h1>PowerTeam</h1>
-			<p class="slogan">La mejor paginas de video juegos online del mundo para
+			<p class="slogan">La mejor página de videojuegos online del mundo para
 				comprar tus juegos.</p>
 			<nav>
 				<ul class="nav-list">
 					<li><a href="#">Inicio</a></li>
-					<li><a href="#2">Biblioteca</a></li>
+					<li><a href="#proyectos">Biblioteca</a></li>
 					<li><a href="#contacto">Contacto</a></li>
 				</ul>
 			</nav>
 		</header>
+
 		<main>
 			<article>
 				<h2>Power Tienda</h2>
-				<p>El mejor catalogo de juegos</p>
+				<p>El mejor catálogo de juegos</p>
 			</article>
+
 			<section class="tarjetas" id="proyectos">
 				<div class="tarjeta">
-					<img src="imagenes/callofduty.png" alt="Call of Duty"
-						class="tarjeta-img">
-					<h3>Call of duty</h3>
+					<img src="imagenes/callofduty.png" alt="Call of Duty" class="tarjeta-img">
+					<h3>Call of Duty</h3>
 					<p>juego</p>
 				</div>
 				<div class="tarjeta">
@@ -50,12 +53,7 @@
 				</div>
 				<div class="tarjeta">
 					<img src="imagenes/ciber.png" alt="Cyberpunk 2077" class="tarjeta-img">
-					<h3>Ciber punk 2077</h3>
-					<p>juego</p>
-				</div>
-				<div class="tarjeta">
-					<img src="imagenes/gta5.png" alt="GTA V" class="tarjeta-img">
-					<h3>GTA V</h3>
+					<h3>Cyberpunk 2077</h3>
 					<p>juego</p>
 				</div>
 				<div class="tarjeta">
@@ -66,15 +64,91 @@
 				<div class="tarjeta">
 					<img src="imagenes/resident.png" alt="Resident Evil 4" class="tarjeta-img">
 					<h3>Resident Evil 4</h3>
-					<p>juego para (pc)</p>
-					<p>Precio: 20€</p>
-
 				</div>
 			</section>
 
+			<section id="tabla-ejemplo">
+				<h2 style="text-align:center; color:#1896df;">Tabla de Juegos</h2>
+				<table>
+					<caption>Listado de Juegos y Precios</caption>
+					<thead>
+						<tr>
+							<th scope="col">Juego</th>
+							<th scope="col">Plataforma</th>
+							<th scope="col">Precio (€)</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Call of Duty</td>
+							<td>PC</td>
+							<td>60</td>
+						</tr>
+						<tr>
+							<td>FIFA 26</td>
+							<td>PS5</td>
+							<td>55</td>
+						</tr>
+						<tr>
+							<td>Diablo IV</td>
+							<td>PC</td>
+							<td>50</td>
+						</tr>
+						<tr>
+							<td>Cyberpunk 2077</td>
+							<td>PC/PS5</td>
+							<td>40</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section id="contacto">
+				<h2 style="text-align:center; color:#1896df;">Contactanos</h2>
+				<p style="text-align:center; color:#4ea8de;">Si tienes algun problema,
+					contáctanos.</p>
+
+				<div class="contacto-container">
+					<!-- FORMULARIO -->
+					<form id="form-contacto" class="form-contacto">
+						<label for="nombre">Nombre</label>
+						<input type="text" id="nombre" name="nombre" required>
+
+						<label for="email">Correo</label>
+						<input type="email" id="email" name="email" required>
+
+						<label for="mensaje">Mensaje</label>
+						<textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+						<button type="submit">Enviar</button>
+					</form>
+>
+					<div class="info-contacto">
+						<h3>Información de contacto</h3>
+						<p><strong>Correo:</strong> powerteam@gamil.com</p>
+						<p><strong>Teléfono:</strong> +34 601123456</p>
+						<p><strong>Dirección:</strong> Calle Gamer 45, Barcelona</p>
+
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.1234567890123!2d2.1540073153153!3d41.3879169792637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a3b3b3b3b3b3%3A0xabcdefabcdefabcd!2sBarcelona!5e0!3m2!1ses!2ses!4v1600000000000!5m2!1ses!2ses"
+							width="100%" height="250" style="border:0;" allowfullscreen
+							loading="lazy"></iframe>
+					</div>
+				</div>
+			</section>
 		</main>
+
 		<footer>
 			<small>&copy; 2025 · Ilerna</small>
 		</footer>
+
+		//para validar mi formulario
+		<script>
+    document.getElementById('form-contacto').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Gracias por contactarnos =) ');
+      this.reset();
+    });
+  </script>
 	</body>
 </html>
