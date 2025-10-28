@@ -3,178 +3,168 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PowerTeam – Bootstrap</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style-bootstrap.css">
+  <title>PowerTeam</title>
   <link rel="shortcut icon" href="imagenes/logo1.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-dark text-light">
 
-  <header class="text-center py-4 border-bottom border-primary">
-    <h1 class="fw-bold text-info" style="font-family: 'Orbitron', sans-serif;">PowerTeam</h1>
-    <p class="slogan text-primary">La mejor página de videojuegos online del mundo para comprar tus juegos.</p>
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
-      <div class="container">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div id="menu" class="collapse navbar-collapse justify-content-center">
-          <ul class="navbar-nav">
-            <li class="nav-item"><a href="#" class="nav-link">Inicio</a></li>
-            <li class="nav-item"><a href="#proyectos" class="nav-link">Biblioteca</a></li>
-            <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
-          </ul>
-        </div>
-      </div>
+<body>
+  <header class="header-neon text-center py-5">
+  <div class="container">
+    <h1 class="fw-bold neon-text">PowerTeam</h1>
+    <p class="slogan neon-subtext">La mejor página de videojuegos online del mundo para comprar tus juegos.</p>
+    <nav class="navbar navbar-expand-lg navbar-dark justify-content-center">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link neon-link" href="#">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link neon-link" href="#proyectos">Biblioteca</a></li>
+        <li class="nav-item"><a class="nav-link neon-link" href="#contacto">Contacto</a></li>
+      </ul>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <section class="container my-4 text-center p-4 bg-secondary bg-opacity-25 rounded">
-    <h2 class="text-info">Power Tienda</h2>
-    <p>El mejor catálogo de juegos</p>
-  </section>
-
-  <section id="proyectos" class="container my-5">
-    <div class="row g-4 justify-content-center">
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card bg-black border-info h-100 text-center">
-          <img src="imagenes/callofduty.png" class="card-img-top" alt="Call of Duty">
-          <div class="card-body">
-            <h5 class="card-title text-info">Call of Duty</h5>
-            <p class="card-text">Juego</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card bg-black border-info h-100 text-center">
-          <img src="imagenes/fifa.png" class="card-img-top" alt="Fifa 26">
-          <div class="card-body">
-            <h5 class="card-title text-info">FIFA 26</h5>
-            <p class="card-text">Juego</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card bg-black border-info h-100 text-center">
-          <img src="imagenes/diablo.png" class="card-img-top" alt="Diablo IV">
-          <div class="card-body">
-            <h5 class="card-title text-info">Diablo IV</h5>
-            <p class="card-text">Juego</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card bg-black border-info h-100 text-center">
-          <img src="imagenes/amongus.png" class="card-img-top" alt="Amogus">
-          <div class="card-body">
-            <h5 class="card-title text-info">Amogus</h5>
-            <p class="card-text">Juego</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card bg-black border-info h-100 text-center">
-          <img src="imagenes/ciber.png" class="card-img-top" alt="Cyberpunk 2077">
-          <div class="card-body">
-            <h5 class="card-title text-info">Cyberpunk 2077</h5>
-            <p class="card-text">Juego</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card bg-black border-info h-100 text-center">
-          <img src="imagenes/gta5.png" class="card-img-top" alt="GTA V">
-          <div class="card-body">
-            <h5 class="card-title text-info">GTA V</h5>
-            <p class="card-text">Juego</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card bg-black border-info h-100 text-center">
-          <img src="imagenes/resident.png" class="card-img-top" alt="Resident Evil 4">
-          <div class="card-body">
-            <h5 class="card-title text-info">Resident Evil 4</h5>
-            <p class="card-text">Juego</p>
-          </div>
-        </div>
-      </div>
+  <!-- mi hero -->
+<section class="hero">
+  <div class="hero-contenedor">
+    <img src="imagenes/img1.png" alt="Banner PowerTeam" class="hero-img">
+    <div class="hero-text">
+      <h2>Power Tienda</h2>
+      <p>El mejor catálogo de juegos</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="container my-5">
-    <h2 class="text-center text-info mb-4">Tabla de Juegos</h2>
-    <div class="table-responsive">
-      <table class="table table-dark table-bordered border-info text-center align-middle">
-        <caption class="text-info">Listado de Juegos y Precios</caption>
-        <thead class="table-primary text-dark">
-          <tr>
-            <th>Juego</th>
-            <th>Plataforma</th>
-            <th>Precio (€)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Call of Duty</td><td>PC</td><td>60</td></tr>
-          <tr><td>FIFA 26</td><td>PS5</td><td>55</td></tr>
-          <tr><td>Diablo IV</td><td>PC</td><td>50</td></tr>
-          <tr><td>Cyberpunk 2077</td><td>PC/PS5</td><td>40</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
+  <main class="container my-5">
 
-  <section id="contacto" class="container my-5">
-    <h2 class="text-center text-info mb-4">Contáctanos</h2>
-    <p class="text-center text-primary mb-4">Si tienes algún problema, contáctanos.</p>
-
+    <section class="tarjetas" id="proyectos">
+  <div class="container py-5">
     <div class="row g-4 justify-content-center">
-      <!-- Formulario -->
-      <div class="col-12 col-md-6">
-        <form id="form-contacto">
-          <div class="mb-3">
-            <label for="nombre" class="form-label">Nombre</label>
-            <input type="text" class="form-control bg-black text-white" id="nombre" required>
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Correo</label>
-            <input type="email" class="form-control bg-black text-white" id="email" required>
-          </div>
-          <div class="mb-3">
-            <label for="mensaje" class="form-label">Mensaje</label>
-            <textarea class="form-control bg-black text-white" id="mensaje" rows="5" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-info w-100">Enviar</button>
-        </form>
+
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="tarjeta text-center p-3">
+          <img src="imagenes/callofduty.png" alt="Call of Duty" class="tarjeta-img">
+          <h3>Call of Duty</h3>
+          <p>Juego</p>
+        </div>
       </div>
 
-      <div class="col-12 col-md-6">
-        <div class="p-3 border border-info rounded bg-black text-white h-100">
-          <h3 class="text-info mb-3">Información de contacto</h3>
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="tarjeta text-center p-3">
+          <img src="imagenes/fifa.png" alt="Fifa 26" class="tarjeta-img">
+          <h3>Fifa 26</h3>
+          <p>Juego</p>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="tarjeta text-center p-3">
+          <img src="imagenes/diablo.png" alt="Diablo IV" class="tarjeta-img">
+          <h3>Diablo IV</h3>
+          <p>Juego</p>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="tarjeta text-center p-3">
+          <img src="imagenes/amongus.png" alt="Amogus" class="tarjeta-img">
+          <h3>Amogus</h3>
+          <p>Juego</p>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="tarjeta text-center p-3">
+          <img src="imagenes/ciber.png" alt="Cyberpunk 2077" class="tarjeta-img">
+          <h3>Cyberpunk 2077</h3>
+          <p>Juego</p>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="tarjeta text-center p-3">
+          <img src="imagenes/gta5.png" alt="GTA V" class="tarjeta-img">
+          <h3>GTA V</h3>
+          <p>Juego</p>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="tarjeta text-center p-3">
+          <img src="imagenes/resident.png" alt="Resident Evil 4" class="tarjeta-img">
+          <h3>Resident Evil 4</h3>
+          <p>Juego</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <section id="tabla-ejemplo" class="my-5 text-center">
+      <h2 class="titulo-seccion">Tabla de Juegos</h2>
+      <div class="table-responsive mt-4">
+        <table class="table table-dark table-bordered align-middle tabla-personalizada">
+          <thead>
+            <tr>
+              <th>Juego</th>
+              <th>Plataforma</th>
+              <th>Precio (€)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Call of Duty</td><td>PC</td><td>60</td></tr>
+            <tr><td>FIFA 26</td><td>PS5</td><td>55</td></tr>
+            <tr><td>Diablo IV</td><td>PC</td><td>50</td></tr>
+            <tr><td>Cyberpunk 2077</td><td>PC/PS5</td><td>40</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="contacto" class="my-5">
+      <h2 class="text-center titulo-seccion">Contáctanos</h2>
+      <p class="text-center text-info">Si tienes algún problema, contáctanos.</p>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-5">
+          <form id="form-contacto" class="form-contacto">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" type="text" required>
+
+            <label for="email">Correo</label>
+            <input id="email" type="email" required>
+
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+
+        <div class="col-md-5 contacto-info">
+          <h3>Información de contacto</h3>
           <p><strong>Correo:</strong> powerteam@gmail.com</p>
           <p><strong>Teléfono:</strong> +34 601123456</p>
           <p><strong>Dirección:</strong> Calle Gamer 45, Barcelona</p>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.1234567890123!2d2.1540073153153!3d41.3879169792637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a3b3b3b3b3b3%3A0xabcdefabcdefabcd!2sBarcelona!5e0!3m2!1ses!2ses!4v1600000000000!5m2!1ses!2ses" width="100%" height="250" style="border:0;" allowfullscreen loading="lazy"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18..." loading="lazy"></iframe>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <footer class="py-3 text-center border-top border-primary">
+  <footer class="text-center py-3 bg-dark text-light mt-5 fixed-bottom">
     <small>&copy; 2025 · Ilerna</small>
   </footer>
 
-  <!-- para validar mi formulario -->
   <script>
-    document.getElementById('form-contacto').addEventListener('submit', function(e) {
+    document.getElementById("form-contacto").addEventListener("submit", e => {
       e.preventDefault();
-      alert('Gracias por contactarnos =) ');
-      this.reset();
+      alert("¡Gracias por contactarnos!");
+      e.target.reset();
     });
   </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
