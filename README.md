@@ -19,3 +19,9 @@ Ventajas de esta estrategia:
 
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+##  Enlaces del proyecto
+
+-**GitHub Pages:** [https://aaronevangelista.github.io/mi_primera_web-con/] (https://aaronevangelista.github.io/mi_primera_web-con/)
+- **Repositorio GitHub:** [https://github.com/AaronEvangelista/mi_primera_web-con.git](https://github.com/AaronEvangelista/mi_primera_web-con.git)
+
