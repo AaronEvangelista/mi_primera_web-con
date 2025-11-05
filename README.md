@@ -17,8 +17,6 @@ Ventajas de esta estrategia:
 - Codigo CSS más limpio y mantenible.  
 - Experiencia de usuario consistente en todos los dispositivos.
 
-```html
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 ##  Enlaces del proyecto
 
