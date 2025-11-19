@@ -1,4 +1,4 @@
-# 🏞️ PowerTeam – Práctica 6: Multimedia Adaptativo
+# PowerTeam – Práctica 6: Multimedia Adaptativo
 
 ## Autor
 **Nombre:** Aaron Evangelista
@@ -30,7 +30,7 @@ Ventajas de esta estrategia:
 
 **Pregunta:** Comprueba que todas las etiquetas `<img>` tienen el tamaño (width y height) controlados desde CSS. Si no es así, aplica una regla CSS global para que todas las imágenes y vídeos(aunque solo tengo img) se escalen correctamente dentro de su contenedor.
 
-**Respuesta y Solución (EJERCICIO 6.1):** meti la siguiente regla CSS global para asegurar que el contenido multimedia no desborde su contenedor y mantenga su proporcion:
+**Respuesta  (EJERCICIO 6.1):** meti la siguiente regla CSS global para asegurar que el contenido multimedia no desborde su contenedor y mantenga su proporcion:
 
 ```css
 img, video {
