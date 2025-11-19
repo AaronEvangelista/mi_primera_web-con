@@ -12,74 +12,87 @@ body {
   font-size: clamp(14px, 2vw, 18px);
 }
 
-img {
+/*-- 6.1--*/
+img,
+video {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
-header {
-  background-color: #050505;
-  box-shadow: 0 0 25px #1896df80;
-  border-bottom: 2px solid #1896df;
-  padding: 25px 0;
-  text-align: center;
-  position: relative;
-  z-index: 10;
-}
-
-header h1 {
+.neon-color {
   color: #1896df;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.8rem;
-  text-shadow: 0 0 15px #1896df;
-  margin-bottom: 8px;
 }
 
-header .slogan {
+.neon-shadow {
+  box-shadow: 0 0 25px #1896df80;
+}
+
+.neon-text {
+  font-family: 'Orbitron', sans-serif;
+  color: #1896df;
+  text-shadow: 0 0 15px #1896df;
+}
+
+.neon-subtext {
   color: #b0b0b0;
-  font-size: 1.1rem;
   text-shadow: 0 0 5px #1896df60;
 }
 
-.navbar {
-  margin-top: 15px;
+.neon-text-title {
+  font-family: 'Orbitron', sans-serif;
+  color: #1896df;
+  text-shadow: 0 0 10px #1896df, 0 0 20px #1896df60;
+  font-size: 2.5rem;
 }
 
-.navbar-nav {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+.neon-text-sm {
+  color: #1896df;
+  text-shadow: 0 0 8px #1896df;
+  font-weight: 700;
+}
+
+.header-neon {
+  background-color: #050505;
+  box-shadow: 0 0 20px #1896df80;
+  border-bottom: 2px solid #1896df;
+  z-index: 1030;
+  padding: 0 !important;
+  text-align: left;
+}
+
+
+.custom-navbar .navbar-brand {
+  font-size: 1.8rem;
   padding: 0;
   margin: 0;
 }
 
-.navbar-nav li a {
-  color: #e0e0e0;
+.custom-navbar .nav-link {
+  color: #e0e0e0 !important;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s, text-shadow 0.3s;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
 }
 
-.navbar-nav li a:hover {
-  color: #1896df;
+.custom-navbar .nav-link:hover {
+  color: #fff !important;
   text-shadow: 0 0 10px #1896df;
 }
 
-/* --- hamburguesa --- */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
+.custom-btn-nav {
+  background-color: #1896df40;
+  border-radius: 5px;
+  border: 1px solid #1896df;
 }
 
-.menu-toggle .bar {
-  height: 3px;
-  width: 25px;
-  background-color: #1896df;
-  margin: 4px 0;
-  border-radius: 2px;
+.custom-btn-nav:hover {
+  background-color: #1896df60;
 }
+
 
 /* --- Hero --- */
 .hero {
@@ -88,6 +101,7 @@ header .slogan {
   align-items: center;
   padding: 60px 20px;
   background-color: #000;
+  height: 450px;
 }
 
 .hero-contenedor {
@@ -98,19 +112,19 @@ header .slogan {
   border-radius: 15px;
   box-shadow: 0 0 25px #1896df80;
   overflow: hidden;
-}
-
-.hero-img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  display: block;
+  height: 100%;
+  background-image: url('imagenes/img1.png');
+  background-size: cover;
+  /* VALOR ELEGIDO */
+  background-position: center;
+  background-repeat: no-repeat;
   opacity: 0.8;
   transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
-.hero-contenedor:hover .hero-img {
-  transform: scale(1.05);
+
+.hero-contenedor:hover {
+  transform: scale(1.03);
   opacity: 0.9;
 }
 
@@ -121,33 +135,61 @@ header .slogan {
   transform: translate(-50%, -50%);
   text-align: center;
   color: #fff;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.6);
   padding: 25px 45px;
   border-radius: 10px;
   border: 1px solid #1896df70;
-  box-shadow: 0 0 20px #1896df60;
-  backdrop-filter: blur(5px);
+  box-shadow: 0 0 25px #1896df80;
+  backdrop-filter: blur(8px);
 }
 
 .hero-text h2 {
-  font-size: 2.3rem;
+  font-size: 2.8rem;
   color: #1896df;
   font-weight: 700;
-  text-shadow: 0 0 12px #1896df;
+  text-shadow: 0 0 15px #1896df;
   margin-bottom: 10px;
 }
 
 .hero-text p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #d0d0d0;
 }
 
-/* --- Tarjetas --- */
-.tarjetas .row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+.ofertas-section {
+  background-color: #0a0a0a;
+  border: 3px solid #1896df;
+  border-radius: 15px;
+  box-shadow: 0 0 40px #1896df;
+  padding: 30px;
+  animation: pulse-border 1.5s infinite alternate;
 }
+
+.ofertas-content {
+  max-width: 700px;
+}
+
+.ofertas-content .carousel-item img,
+.ofertas-content .carousel-item picture img {
+  height: auto;
+  max-height: 350px;
+  width: 100%;
+  object-fit: contain;
+  background-color: #0a0a0a;
+  border-radius: 8px;
+  border: 1px solid #1896df;
+}
+
+@keyframes pulse-border {
+  from {
+    box-shadow: 0 0 30px #1896df;
+  }
+
+  to {
+    box-shadow: 0 0 50px #1896df, 0 0 10px #fff;
+  }
+}
+
 
 .tarjeta {
   background-color: #101010;
@@ -155,79 +197,123 @@ header .slogan {
   border-radius: 10px;
   transition: transform 0.3s, box-shadow 0.3s;
   height: 100%;
+  overflow: hidden;
 }
 
 .tarjeta:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 15px #1896df80;
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 20px #1896df, 0 0 5px #fff;
 }
 
-.tarjeta img {
-  border-bottom: 1px solid #1896df40;
-  height: 230px;
-  object-fit: cover;
-  border-radius: 10px 10px 0 0;
+.tarjeta-img,
+.tarjeta picture img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  background-color: transparent;
+  border-bottom: 2px solid #1896df;
+  transition: all 0.5s ease;
+}
+
+.tarjeta:hover .tarjeta-img,
+.tarjeta:hover picture img {
+  filter: brightness(1.1);
 }
 
 .tarjeta h3 {
   color: #1896df;
-  margin-top: 10px;
+  margin-top: 15px;
+  font-size: 1.4rem;
 }
 
 .tarjeta p {
   color: #c0c0c0;
+  font-size: 0.9rem;
+  padding-bottom: 5px;
+}
+
+.tabla-personalizada {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 15px #1896df80;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.tabla-personalizada thead th {
+  background-color: #1896df;
+  color: #000;
+  font-weight: bold;
+  text-shadow: none;
+  border-color: #000 !important;
+}
+
+.tabla-personalizada tbody tr:hover {
+  background-color: #0d83c7 !important;
+  cursor: pointer;
 }
 
 .form-contacto {
   background-color: #101010;
   border: 1px solid #1896df;
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
+  box-shadow: 0 0 15px #1896df60;
 }
 
 .form-contacto label {
   color: #1896df;
-  margin-top: 10px;
-}
-
-.form-contacto input,
-.form-contacto textarea {
-  width: 100%;
-  background-color: #000;
-  color: #fff;
-  border: 1px solid #1896df60;
-  border-radius: 6px;
-  padding: 8px;
-}
-
-.form-contacto button {
-  margin-top: 15px;
-  background-color: #1896df;
-  border: none;
-  color: #fff;
   font-weight: 600;
-  width: 100%;
-  padding: 10px;
-  border-radius: 8px;
-  transition: background 0.3s, box-shadow 0.3s;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
-.form-contacto button:hover {
-  background-color: #0d83c7;
-  box-shadow: 0 0 10px #1896df80;
+.custom-input {
+  width: 100%;
+  background-color: #000 !important;
+  color: #fff !important;
+  border: 1px solid #1896df60 !important;
+  border-radius: 6px;
+  padding: 10px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.custom-input:focus {
+  border-color: #1896df !important;
+  box-shadow: 0 0 8px #1896df80 !important;
+  background-color: #050505 !important;
+}
+
+.custom-btn {
+  background-color: #1896df !important;
+  border: none !important;
+  color: #000 !important;
+  font-weight: 700 !important;
+  padding: 12px 20px !important;
+  border-radius: 8px !important;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.custom-btn:hover {
+  background-color: #0d83c7 !important;
+  box-shadow: 0 0 15px #1896df !important;
+  color: #fff !important;
 }
 
 .contacto-info {
   background-color: #101010;
   border: 1px solid #1896df;
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
   height: 100%;
+  box-shadow: 0 0 15px #1896df60;
 }
 
 .contacto-info h3 {
   color: #1896df;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   text-align: center;
 }
 
@@ -237,10 +323,14 @@ header .slogan {
   text-align: center;
 }
 
+.contacto-info p a {
+  text-decoration: none;
+}
+
 .contacto-info iframe {
   width: 100%;
   height: 250px;
-  border: none;
+  border: 1px solid #1896df80;
   border-radius: 10px;
   margin-top: 15px;
 }
@@ -255,67 +345,97 @@ footer {
   font-size: 0.9rem;
 }
 
-/* --- la parte de mi media queries --- */
+/* --- Login--- */
+.custom-modal {
+  background-color: #0a0a0a;
+  border: 2px solid #1896df;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #1896df80;
+}
 
-@media (min-width: 481px) and (max-width: 768px) {
-  .hero-img {
-    height: 300px;
+
+@media (max-width: 991.98px) {
+
+  /* Navbar Toggle */
+  .custom-navbar .navbar-toggler {
+    border-color: #1896df;
+    box-shadow: 0 0 5px #1896df;
+  }
+
+  .custom-navbar .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2824, 150, 223, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+
+  .custom-navbar .navbar-collapse {
+    background-color: #000;
+    border-top: 1px solid #1896df60;
+    padding-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .custom-navbar .nav-item {
+    margin: 5px 0;
+  }
+
+  /* Hero */
+  .hero {
+    height: 350px;
   }
 
   .hero-text h2 {
     font-size: 2rem;
   }
 
-  .tarjeta img {
+  .hero-text p {
+    font-size: 1.1rem;
+  }
+
+
+  .tarjeta-img,
+  .tarjeta picture img {
     height: 200px;
   }
-}
 
-@media (min-width: 769px) {
-  .hero-img {
-    height: 400px;
-  }
-
-  .hero-text h2 {
-    font-size: 2.3rem;
-  }
-
-  .tarjeta img {
-    height: 230px;
-  }
-}
-
-/* el menu de hamburguesa y mobile*/
-@media (max-width: 768px) {
-  .navbar-nav {
-    display: none;
-    flex-direction: column;
-    background-color: #000;
+  /* Ofertas */
+  .ofertas-content .carousel-item img,
+  .ofertas-content .carousel-item picture img {
+    height: auto;
+    max-height: 400px;
     width: 100%;
-    text-align: center;
-    padding: 10px 0;
-    border-top: 1px solid #1896df40;
+    object-fit: contain;
+    background-color: #0a0a0a;
+    border-radius: 8px;
+    border: 1px solid #1896df;
+    overflow: hidden;
   }
+}
 
-  .navbar-nav.active {
-    display: flex;
-  }
+@media (max-width: 768px) {
 
-  .menu-toggle {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-  }
-
-  .hero-img {
-    height: 250px;
+  /* Hero */
+  .hero {
+    height: 300px;
   }
 
   .hero-text {
     padding: 15px 25px;
   }
 
+  .hero-text h2 {
+    font-size: 1.7rem;
+  }
+
   .hero-text p {
     font-size: 1rem;
+  }
+
+  .tarjeta-img,
+  .tarjeta picture img {
+    height: 180px;
+  }
+
+  /* Ofertas */
+  .ofertas-content .carousel-item img {
+    max-height: 200px;
   }
 }
