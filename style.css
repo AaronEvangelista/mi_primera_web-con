@@ -439,3 +439,37 @@ footer {
     max-height: 200px;
   }
 }
+/* idiomas */
+#selector-idiomas {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+#selector-idiomas button {
+  background: transparent;
+  border: 1px solid #1896df60;
+  color: #1896df;
+  font-family: 'Orbitron', sans-serif; 
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#selector-idiomas button:hover {
+  background: #1896df20;
+  border-color: #1896df;
+  box-shadow: 0 0 10px #1896df80;
+  color: #fff;
+}
+
+@media (max-width: 991.98px) {
+  #selector-idiomas {
+    justify-content: center;
+    border-top: 1px solid #1896df40;
+    margin-top: 10px;
+  }
+}
