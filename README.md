@@ -1,4 +1,4 @@
-# PowerTeam – Práctica 6: Multimedia Adaptativo
+# PowerTeam – Laboratorio 8: Selector de Idioma Trilingüe
 
 ## Autor
 **Nombre:** Aaron Evangelista
@@ -6,16 +6,16 @@
 
 ---
 
-##  Estrategia de Diseño y Optimización
+##  Estrategia de Implementación y DOM
 
-Los estilos estan pensados para pantallas de moviles y tables.
+Esta práctica se centra en la manipulación dinamica del **Modelo de Objetos del Documento (DOM)** y la gestión del almacenamiento en el lado del cliente.
 
-Mediante **Media Queries** y la optimice de recursos multimedia, el diseño se adapta de forma eficiente a tabletas y escritorios.
+Mediante el uso de un **Diccionario de Traducciones** en JavaScript y la API de **LocalStorage**, el sitio web es capaz de cambiar de idioma en tiempo real sin recargar la página y recordar la preferencia del usuario indefinidamente.
 
-Ventajas de esta estrategia:
-* Mejore rendimiento y tiempos de carga en móviles.
-* Código CSS más limpio y mantenible.
-* Experiencia de usuario consistente y de alta calidad en todos los dispositivos.
+**Ventajas de esta estrategia:**
+* **Interactividad fluida:** Los cambios de idioma son rapidos mediante la manipulación de nodos.
+  
+* **Código Escalable:** El uso de un objeto de traducciones permite añadir nuevos idiomas o elementos de texto de forma sencilla.
 
 ##  Enlaces del Proyecto
 
@@ -24,17 +24,26 @@ Ventajas de esta estrategia:
 
 ---
 
-##  Soluciones Implementadas: Práctica 6
+##  Soluciones Implementadas: Laboratorio 8
 
-### 1. Control CSS Global de Tamaño de Imagenes
+### 1. Manipulación del DOM y Diccionario de Datos
+Se ha implementado un objeto JavaScript (`translations`) donde cada clave corresponde a un `id` único en el HTML. Esto permite una localización precisa de los elementos que requieren traducción.
 
-**Pregunta:** Comprueba que todas las etiquetas `<img>` tienen el tamaño (width y height) controlados desde CSS. Si no es así, aplica una regla CSS global para que todas las imágenes y vídeos(aunque solo tengo img) se escalen correctamente dentro de su contenedor.
 
-**Respuesta  (EJERCICIO 6.1):** meti la siguiente regla CSS global para asegurar que el contenido multimedia no desborde su contenedor y mantenga su proporcion:
 
-```css
-img, video {
-    max-width: 100%;
-    height: auto;
-    display: block; 
+### 2. Logica de Cambio de Idioma (Fase 3)
+Se desarrolló la función `setLanguage(lang)` que realiza las siguientes acciones:
+1. Itera sobre las claves del diccionario.
+2. Utiliza `document.getElementById()` para referenciar el nodo.
+3. Actualiza la propiedad `innerHTML` con el valor correspondiente al idioma seleccionado.
+
+```javascript
+function setLanguage(lang) {
+    for (let id in translations) {
+        const elemento = document.getElementById(id);
+        if (elemento) {
+            elemento.innerHTML = translations[id][lang];
+        }
+    }
+    savePreference(lang);
 }
