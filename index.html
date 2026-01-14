@@ -28,16 +28,23 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#page-top"><i class="bi bi-house-door-fill"></i> Inicio</a>
+              <a id="nav-inicio" class="nav-link" href="#page-top"><i class="bi bi-house-door-fill"></i> Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#proyectos"><i class="bi bi-book-fill"></i> Biblioteca</a>
+              <a id="nav-biblioteca" class="nav-link" href="#proyectos"><i class="bi bi-book-fill"></i> Biblioteca</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contacto"><i class="bi bi-envelope-fill"></i> Contacto</a>
+              <a id="nav-contacto" class="nav-link" href="#contacto"><i class="bi bi-envelope-fill"></i> Contacto</a>
             </li>
             <li class="nav-item">
               <a class="nav-link custom-btn-nav" href="#ofertas"><i class="bi bi-fire"></i> ¡Ofertas!</a>
+            </li>
+            <li class="nav-item">
+              <div id="selector-idiomas" class="ms-lg-3">
+                <button data-lang="ca" class="btn-lang">CA</button>
+                <button data-lang="es" class="btn-lang">ES</button>
+                <button data-lang="en" class="btn-lang">EN</button>
+              </div>
             </li>
           </ul>
         </div>
@@ -48,16 +55,16 @@
   <section class="hero mb-5">
     <div class="hero-contenedor">
       <div class="hero-text">
-        <h2>Power Tienda</h2>
-        <p>El mejor catálogo de juegos</p>
+        <h2 id="hero-titulo">Power Tienda</h2>
+        <p id="hero-subtitulo">El mejor catálogo de juegos</p>
       </div>
     </div>
   </section>
 
   <section id="ofertas" class="container my-5 py-5 ofertas-section text-center">
-    <h2 class="titulo-seccion mb-4 neon-text-title">Ofertas Exclusivas </h2>
+    <h2 id="ofertas-titulo" class="titulo-seccion mb-4 neon-text-title">Ofertas Exclusivas </h2>
     <div class="ofertas-content mx-auto">
-      <p class="neon-subtext mb-4">Descuentos increíbles te esperan.</p>
+      <p id="ofertas-subtext" class="neon-subtext mb-4">Descuentos increíbles te esperan.</p>
       <div id="carouselOfertas" class="carousel slide carousel-fade mb-4" data-bs-ride="carousel">
         <div class="carousel-inner">
 
@@ -69,7 +76,7 @@
           </div>
           <div class="carousel-item" data-bs-interval="5000">
             <picture>
-              <source media="(max-width: 970px)" srcset="imagenes/ofers4.jpg">
+              <source media="(max-width: 970px)" srcset="imagenes/ofers4.png">
               <img src="imagenes/ofers2.jpg" class="d-block w-100" alt="Oferta Exclusiva 2">
             </picture>
           </div>
@@ -80,7 +87,7 @@
 
   <main class="container my-5">
     <section class="tarjetas" id="proyectos">
-      <h2 class="titulo-seccion text-center mb-5 neon-text-title">Biblioteca de Juegos</h2>
+      <h2 id="biblioteca-titulo" class="titulo-seccion text-center mb-5 neon-text-title">Biblioteca de Juegos</h2>
       <div class="container py-5">
         <div class="row g-4 justify-content-center">
           <div class="col-sm-6 col-md-4 col-lg-3">
@@ -134,14 +141,14 @@
     </section>
 
     <section id="tabla-ejemplo" class="my-5 text-center">
-      <h2 class="titulo-seccion mb-4 neon-text-title">Precios Destacados</h2>
+      <h2 id="precios-titulo" class="titulo-seccion mb-4 neon-text-title">Precios Destacados</h2>
       <div class="table-responsive mt-4">
         <table class="table table-dark table-striped table-hover table-bordered align-middle tabla-personalizada">
           <thead>
             <tr>
-              <th>Juego</th>
-              <th>Plataforma</th>
-              <th>Precio (€)</th>
+              <th id="tabla-juego">Juego</th>
+              <th id="tabla-plataforma">Plataforma</th>
+              <th id="tabla-precio">Precio (€)</th>
             </tr>
           </thead>
           <tbody>
@@ -171,33 +178,33 @@
     </section>
 
     <section id="contacto" class="my-5 py-4">
-      <h2 class="text-center titulo-seccion mb-5 neon-text-title">Contactanos</h2>
+      <h2 id="contacto-titulo" class="text-center titulo-seccion mb-5 neon-text-title">Contactanos</h2>
       <div class="row g-4 justify-content-center">
         <div class="col-md-6 col-lg-5">
           <form id="form-contacto" class="form-contacto p-4">
             <div class="mb-3">
-              <label for="nombre" class="form-label">Nombre</label>
+              <label id="contacto-nombre" for="nombre" class="form-label">Nombre</label>
               <input id="nombre" type="text" class="form-control custom-input" required>
             </div>
             <div class="mb-3">
-              <label for="email" class="form-label">Correo</label>
+              <label id="contacto-email" for="email" class="form-label">Correo</label>
               <input id="email" type="email" class="form-control custom-input" required>
             </div>
             <div class="mb-3">
-              <label for="mensaje" class="form-label">Mensaje</label>
+              <label id="contacto-mensaje" for="mensaje" class="form-label">Mensaje</label>
               <textarea id="mensaje" rows="4" class="form-control custom-input" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary custom-btn w-100">Enviar Mensaje</button>
+            <button id="contacto-enviar" type="submit" class="btn btn-primary custom-btn w-100">Enviar Mensaje</button>
           </form>
         </div>
         <div class="col-md-6 col-lg-5">
           <div class="contacto-info p-4 h-100">
-            <h3>Información de Contacto</h3>
-            <p class="mb-2"><i class="bi bi-mailbox2"></i> <strong>Correo:</strong> <a href="mailto:powerteam@gmail.com"
+            <h3 id="contacto-info-titulo">Información de Contacto</h3>
+            <p class="mb-2"><i class="bi bi-mailbox2"></i> <strong id="contacto-correo">Correo:</strong> <a href="mailto:powerteam@gmail.com"
                 class="text-info">powerteam@gmail.com</a></p>
-            <p class="mb-2"><i class="bi bi-telephone-fill"></i> <strong>Teléfono:</strong> <a href="tel:+34601123456"
+            <p class="mb-2"><i class="bi bi-telephone-fill"></i> <strong id="contacto-telefono">Teléfono:</strong> <a href="tel:+34601123456"
                 class="text-info">+34 601123456</a></p>
-            <p class="mb-3"><i class="bi bi-geo-alt-fill"></i> <strong>Dirección:</strong> Calle Gamer 45, Barcelona</p>
+            <p class="mb-3"><i class="bi bi-geo-alt-fill"></i> <strong id="contacto-direccion">Dirección:</strong> Calle Gamer 45, Barcelona</p>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18..." loading="lazy"></iframe>
           </div>
         </div>
@@ -205,8 +212,51 @@
     </section>
   </main>
 
-  <footer class="text-center py-3 bg-dark text-light mt-5">
-    <small>© 2025 Ilerna</small>
+  <footer class="bg-dark text-light pt-5 pb-3 mt-5 border-top border-primary">
+    <div class="container">
+      <div class="row g-4">
+
+        <div class="col-lg-4 col-md-6">
+          <h4 class="neon-text mb-3"><i class="bi bi-controller"></i> PowerTeam</h4>
+          <p id="footer-descripcion" class="text-secondary">Llevando la experiencia gaming al siguiente nivel. Encuentra los mejores títulos y
+            ofertas exclusivas en un solo lugar.</p>
+        </div>
+
+        <div class="col-lg-4 col-md-6 text-md-center">
+          <h5 id="footer-navegacion" class="text-white mb-3">Navegación</h5>
+          <ul class="list-unstyled">
+            <li><a href="#page-top" class="text-secondary text-decoration-none hover-link">Inicio</a></li>
+            <li><a href="#proyectos" class="text-secondary text-decoration-none hover-link">Biblioteca</a></li>
+            <li><a href="#contacto" class="text-secondary text-decoration-none hover-link">Contacto</a></li>
+            <li><a href="#ofertas" class="text-secondary text-decoration-none hover-link">Ofertas</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12 text-lg-end text-md-center">
+          <h5 id="footer-redes" class="text-white mb-3">Síguenos</h5>
+          <div class="d-flex justify-content-lg-end justify-content-center gap-3">
+            <a href="https://facebook.com" target="_blank" class="social-icon facebook"><i
+                class="bi bi-facebook fs-3"></i></a>
+            <a href="https://instagram.com" target="_blank" class="social-icon instagram"><i
+                class="bi bi-instagram fs-3"></i></a>
+            <a href="https://twitter.com" target="_blank" class="social-icon twitter"><i
+                class="bi bi-twitter-x fs-3"></i></a>
+            <a href="https://discord.com" target="_blank" class="social-icon discord"><i
+                class="bi bi-discord fs-3"></i></a>
+          </div>
+          <p class="mt-3 text-secondary">Unete a nuestra comunidad.</p>
+        </div>
+
+      </div>
+
+      <hr class="my-4 border-secondary">
+
+      <div class="text-center">
+        <small id="footer-derechos" class="text-secondary">
+          © 2025 Ilerna Todos los derechos reservados.
+        </small>
+      </div>
+    </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -217,6 +267,7 @@
       e.target.reset();
     });
   </script>
+  <script src="script.js"></script>
 </body>
 
 </html>
