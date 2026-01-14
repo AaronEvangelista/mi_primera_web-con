@@ -33,6 +33,96 @@ const translations = {
         'ca': 'Descomptes increïbles t\'esperen.',
         'es': 'Descuentos increíbles te esperan.',
         'en': 'Incredible discounts await you.'
+    },
+    'biblioteca-titulo': {
+        'ca': 'Biblioteca de Jocs',
+        'es': 'Biblioteca de Juegos',
+        'en': 'Game Library'
+    },
+    'precios-titulo': {
+        'ca': 'Preus Destacats',
+        'es': 'Precios Destacados',
+        'en': 'Featured Prices'
+    },
+    'tabla-juego': {
+        'ca': 'Joc',
+        'es': 'Juego',
+        'en': 'Game'
+    },
+    'tabla-plataforma': {
+        'ca': 'Plataforma',
+        'es': 'Plataforma',
+        'en': 'Platform'
+    },
+    'tabla-precio': {
+        'ca': 'Preu (€)',
+        'es': 'Precio (€)',
+        'en': 'Price (€)'
+    },
+    'contacto-titulo': {
+        'ca': 'Contacta\'ns',
+        'es': 'Contactanos',
+        'en': 'Contact Us'
+    },
+    'contacto-nombre': {
+        'ca': 'Nom',
+        'es': 'Nombre',
+        'en': 'Name'
+    },
+    'contacto-email': {
+        'ca': 'Correu',
+        'es': 'Correo',
+        'en': 'Email'
+    },
+    'contacto-mensaje': {
+        'ca': 'Missatge',
+        'es': 'Mensaje',
+        'en': 'Message'
+    },
+    'contacto-enviar': {
+        'ca': 'Enviar Missatge',
+        'es': 'Enviar Mensaje',
+        'en': 'Send Message'
+    },
+    'contacto-info-titulo': {
+        'ca': 'Informació de Contacte',
+        'es': 'Información de Contacto',
+        'en': 'Contact Information'
+    },
+    'contacto-correo': {
+        'ca': 'Correu:',
+        'es': 'Correo:',
+        'en': 'Email:'
+    },
+    'contacto-telefono': {
+        'ca': 'Telèfon:',
+        'es': 'Teléfono:',
+        'en': 'Phone:'
+    },
+    'contacto-direccion': {
+        'ca': 'Adreça:',
+        'es': 'Dirección:',
+        'en': 'Address:'
+    },
+    'footer-descripcion': {
+        'ca': 'Portant l\'experiència gaming al següent nivell. Troba els millors títols i ofertes exclusives en un sol lloc.',
+        'es': 'Llevando la experiencia gaming al siguiente nivel. Encuentra los mejores títulos y ofertas exclusivas en un solo lugar.',
+        'en': 'Taking the gaming experience to the next level. Find the best titles and exclusive offers in one place.'
+    },
+    'footer-navegacion': {
+        'ca': 'Navegació',
+        'es': 'Navegación',
+        'en': 'Navigation'
+    },
+    'footer-redes': {
+        'ca': 'Xarxes Socials',
+        'es': 'Redes Sociales',
+        'en': 'Social Networks'
+    },
+    'footer-derechos': {
+        'ca': '© 2025 Ilerna Tots els drets reservats.',
+        'es': '© 2025 Ilerna Todos los derechos reservados.',
+        'en': '© 2025 Ilerna All rights reserved.'
     }
 };
 
