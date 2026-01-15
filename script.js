@@ -156,3 +156,32 @@ function loadPreference() {
 }
 
 window.onload = loadPreference;
+
+
+const audioPlayer = document.getElementById("myAudio");
+const playBtn = document.getElementById("playBtn");
+const playIcon = playBtn.querySelector("i"); 
+const audioStatus = document.getElementById("audio-status");
+
+function togglePlay() {
+  if (audioPlayer.paused) {
+    audioPlayer.play();
+    
+    playIcon.classList.remove("bi-play-fill");
+    playIcon.classList.add("bi-pause-fill");
+    
+    audioStatus.textContent = "Reproduciendo...";
+    playBtn.classList.add("playing");
+
+  } else {
+    audioPlayer.pause();
+    
+    playIcon.classList.remove("bi-pause-fill");
+    playIcon.classList.add("bi-play-fill");
+    
+    audioStatus.textContent = "Play Music";
+    playBtn.classList.remove("playing");
+  }
+}
+
+audioPlayer.volume = 0.5;
