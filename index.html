@@ -82,6 +82,7 @@
           </div>
         </div>
       </div>
+      <a href="ofertas.html" class="btn btn-danger custom-btn-nav mt-4"><i class="bi bi-fire"></i> Oferta</a>
     </div>
   </section>
 
@@ -200,11 +201,12 @@
         <div class="col-md-6 col-lg-5">
           <div class="contacto-info p-4 h-100">
             <h3 id="contacto-info-titulo">Información de Contacto</h3>
-            <p class="mb-2"><i class="bi bi-mailbox2"></i> <strong id="contacto-correo">Correo:</strong> <a href="mailto:powerteam@gmail.com"
-                class="text-info">powerteam@gmail.com</a></p>
-            <p class="mb-2"><i class="bi bi-telephone-fill"></i> <strong id="contacto-telefono">Teléfono:</strong> <a href="tel:+34601123456"
-                class="text-info">+34 601123456</a></p>
-            <p class="mb-3"><i class="bi bi-geo-alt-fill"></i> <strong id="contacto-direccion">Dirección:</strong> Calle Gamer 45, Barcelona</p>
+            <p class="mb-2"><i class="bi bi-mailbox2"></i> <strong id="contacto-correo">Correo:</strong> <a
+                href="mailto:powerteam@gmail.com" class="text-info">powerteam@gmail.com</a></p>
+            <p class="mb-2"><i class="bi bi-telephone-fill"></i> <strong id="contacto-telefono">Teléfono:</strong> <a
+                href="tel:+34601123456" class="text-info">+34 601123456</a></p>
+            <p class="mb-3"><i class="bi bi-geo-alt-fill"></i> <strong id="contacto-direccion">Dirección:</strong> Calle
+              Gamer 45, Barcelona</p>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18..." loading="lazy"></iframe>
           </div>
         </div>
@@ -212,13 +214,32 @@
     </section>
   </main>
 
+  <section id="audio-player" class="container my-5 text-center">
+    <h3 id="audio-titulo" class="neon-text-sm mb-3">musica de fondo</h3>
+
+    <div class="custom-audio-wrapper p-3">
+      <audio id="myAudio">
+        <source src="audios/cyberpunk.mp3" type="audio/mpeg">
+        <source src="audios/cyberpunk-mejorado.ogg" type="audio/ogg">
+      </audio>
+
+      <div class="audio-controls d-flex align-items-center justify-content-center">
+        <button onclick="togglePlay()" class="btn-audio" id="playBtn" aria-label="Play/Pause">
+          <i class="bi bi-play-fill"></i>
+        </button>
+        <span id="audio-status" class="ms-3">Play Music</span>
+      </div>
+    </div>
+  </section>
+
   <footer class="bg-dark text-light pt-5 pb-3 mt-5 border-top border-primary">
     <div class="container">
       <div class="row g-4">
 
         <div class="col-lg-4 col-md-6">
           <h4 class="neon-text mb-3"><i class="bi bi-controller"></i> PowerTeam</h4>
-          <p id="footer-descripcion" class="text-secondary">Llevando la experiencia gaming al siguiente nivel. Encuentra los mejores títulos y
+          <p id="footer-descripcion" class="text-secondary">Llevando la experiencia gaming al siguiente nivel. Encuentra
+            los mejores títulos y
             ofertas exclusivas en un solo lugar.</p>
         </div>
 
