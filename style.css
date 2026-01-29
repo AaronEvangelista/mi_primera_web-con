@@ -5,14 +5,13 @@
 body {
   background-color: #000;
   color: #e0e0e0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   min-height: 100vh;
   margin: 0;
   padding: 0;
   font-size: clamp(14px, 2vw, 18px);
 }
 
-/*-- 6.1--*/
 img,
 video {
   max-width: 100%;
@@ -29,7 +28,7 @@ video {
 }
 
 .neon-text {
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
   color: #1896df;
   text-shadow: 0 0 15px #1896df;
 }
@@ -40,9 +39,11 @@ video {
 }
 
 .neon-text-title {
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
   color: #1896df;
-  text-shadow: 0 0 10px #1896df, 0 0 20px #1896df60;
+  text-shadow:
+    0 0 10px #1896df,
+    0 0 20px #1896df60;
   font-size: 2.5rem;
 }
 
@@ -61,7 +62,6 @@ video {
   text-align: left;
 }
 
-
 .custom-navbar .navbar-brand {
   font-size: 1.8rem;
   padding: 0;
@@ -72,7 +72,9 @@ video {
   color: #e0e0e0 !important;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s, text-shadow 0.3s;
+  transition:
+    color 0.3s,
+    text-shadow 0.3s;
   padding-left: 15px;
   padding-right: 15px;
   position: relative;
@@ -93,7 +95,6 @@ video {
   background-color: #1896df60;
 }
 
-
 /* --- Hero --- */
 .hero {
   display: flex;
@@ -113,15 +114,15 @@ video {
   box-shadow: 0 0 25px #1896df80;
   overflow: hidden;
   height: 100%;
-  background-image: url('imagenes/img1.png');
+  background-image: url("imagenes/img1.png");
   background-size: cover;
-  /* VALOR ELEGIDO */
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0.8;
-  transition: transform 0.6s ease, opacity 0.6s ease;
+  transition:
+    transform 0.6s ease,
+    opacity 0.6s ease;
 }
-
 
 .hero-contenedor:hover {
   transform: scale(1.03);
@@ -186,23 +187,28 @@ video {
   }
 
   to {
-    box-shadow: 0 0 50px #1896df, 0 0 10px #fff;
+    box-shadow:
+      0 0 50px #1896df,
+      0 0 10px #fff;
   }
 }
-
 
 .tarjeta {
   background-color: #101010;
   border: 1px solid #1896df;
   border-radius: 10px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
   height: 100%;
   overflow: hidden;
 }
 
 .tarjeta:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 0 20px #1896df, 0 0 5px #fff;
+  box-shadow:
+    0 0 20px #1896df,
+    0 0 5px #fff;
 }
 
 .tarjeta-img,
@@ -275,7 +281,9 @@ video {
   border: 1px solid #1896df60 !important;
   border-radius: 6px;
   padding: 10px;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
 }
 
 .custom-input:focus {
@@ -291,7 +299,9 @@ video {
   font-weight: 700 !important;
   padding: 12px 20px !important;
   border-radius: 8px !important;
-  transition: background-color 0.3s, box-shadow 0.3s;
+  transition:
+    background-color 0.3s,
+    box-shadow 0.3s;
   width: 100%;
   margin-top: 15px;
 }
@@ -353,9 +363,7 @@ footer {
   box-shadow: 0 0 20px #1896df80;
 }
 
-
 @media (max-width: 991.98px) {
-
   /* Navbar Toggle */
   .custom-navbar .navbar-toggler {
     border-color: #1896df;
@@ -390,7 +398,6 @@ footer {
     font-size: 1.1rem;
   }
 
-
   .tarjeta-img,
   .tarjeta picture img {
     height: 200px;
@@ -411,7 +418,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-
   /* Hero */
   .hero {
     height: 300px;
@@ -451,7 +457,7 @@ footer {
   background: transparent;
   border: 1px solid #1896df60;
   color: #1896df;
-  font-family: 'Orbitron', sans-serif; 
+  font-family: "Orbitron", sans-serif;
   font-size: 0.75rem;
   padding: 2px 8px;
   border-radius: 4px;
@@ -476,51 +482,147 @@ footer {
 
 /* audio */
 #audio-player .custom-audio-wrapper {
-    background-color: rgba(0, 0, 0, 0.8); 
-    border: 1px solid #0dcaf0; 
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(13, 202, 240, 0.2);
-    max-width: 400px;
-    margin: 0 auto; 
-    backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid #0dcaf0;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(13, 202, 240, 0.2);
+  max-width: 400px;
+  margin: 0 auto;
+  backdrop-filter: blur(5px);
 }
 
 .btn-audio {
-    background-color: transparent;
-    border: 2px solid #08d1f5;
-    color: #2600fc;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%; 
-    font-size: 30px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-color: transparent;
+  border: 2px solid #08d1f5;
+  color: #2600fc;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-audio:hover {
-    background-color: #31a9d8;
-    color: white;
-    box-shadow: 0 0 20px #19b1df;
-    transform: scale(1.1);
+  background-color: #31a9d8;
+  color: white;
+  box-shadow: 0 0 20px #19b1df;
+  transform: scale(1.1);
 }
 
 .btn-audio.playing {
-    border-color: #13c4e4; 
-    color: #0f5ceb;
-    box-shadow: 0 0 15px #10a6ec; 
+  border-color: #13c4e4;
+  color: #0f5ceb;
+  box-shadow: 0 0 15px #10a6ec;
 }
 .btn-audio.playing:hover {
-    background-color: #19dae7;
-    color: white;
+  background-color: #19dae7;
+  color: white;
 }
 
 #audio-status {
-    font-family: 'Orbitron', sans-serif; 
-    color: #fff;
-    font-size: 1.1rem;
-    letter-spacing: 1px;
-    text-shadow: 0 0 5px #0dcaf0;
+  font-family: "Orbitron", sans-serif;
+  color: #fff;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  text-shadow: 0 0 5px #0dcaf0;
+}
+
+/* para mi nav*/
+.custom-navbar .nav-link {
+  transition:
+    color 0.3s ease,
+    text-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active {
+  transform: translateY(-3px);
+  color: #fff !important;
+  text-shadow:
+    0 0 15px #1896df,
+    0 0 30px #1896df80;
+}
+
+/* cambio para menu*/
+.dropdown-menu {
+  background-color: #050505;
+  border: 1px solid #1896df;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #1896df40;
+  padding: 10px 0;
+
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  color: #e0e0e0;
+  font-family: "Montserrat", sans-serif;
+  transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(24, 150, 223, 0.2);
+  color: #fff;
+  padding-left: 20px;
+  text-shadow: 0 0 8px #1896df;
+}
+
+.dropdown-divider {
+  border-top: 1px solid #1896df60;
+}
+
+@keyframes neonPulse {
+  0% {
+    transform: scale(1);
+    text-shadow: 0 0 10px #1896df40;
+  }
+  50% {
+    transform: scale(1.15);
+    text-shadow:
+      0 0 20px #1896df,
+      0 0 10px #fff;
+    filter: brightness(1.2);
+  }
+  100% {
+    transform: scale(1);
+    text-shadow: 0 0 10px #1896df40;
+  }
+}
+
+.custom-navbar .navbar-brand i {
+  display: inline-block;
+  animation-name: neonPulse;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.navbar-brand {
+  animation: fadeInDown 1.2s ease-out forwards;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
