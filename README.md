@@ -1,49 +1,23 @@
-# PowerTeam – Laboratorio 8: Selector de Idioma Trilingüe
+##  Soluciones Implementadas: Practica 10 (Diseño y Animación)
 
-## Autor
-**Nombre:** Aaron Evangelista
-**Materia:** DAW M09. Disseny d'Interfícies Web
+### 1. Estrategia Visual y Transiciones (Fase 1)
 
----
+**Diseño**
+use la paleta de colores se basa en un fondo oscuro profundo (`#000` y `#050505`) contrastado con un azul tipo neon.
 
-##  Estrategia de Implementación y DOM
+Puse unas transiciones suaves para que la web se va mas atractiva  
+**Implementacion**
+* **Navegación :** Los enlaces no cambian de golpe use `transition: color 0.3s, text-shadow 0.3s` para que el brillo aparezca gradualmente.
+* **Desplegables ** Para el submenú, quería un efecto de "despliegue mecánico". En lugar de un `display: none` simple, he combinado `opacity` con `transform: translateY`.
+    * **Curva de velocidad:** He utilizado `cubic-bezier(0.175, 0.885, 0.32, 1.275)` para que tenga un rebote al final de la animacion haciendo que el menu se vea mas atractivo
 
-Esta práctica se centra en la manipulación dinamica del **Modelo de Objetos del Documento (DOM)** y la gestión del almacenamiento en el lado del cliente.
+**Enlace al codigo de las transiciones:**
+[Ver implementación CSS en GitHub (Líneas 70-85 y 560-580)](https://github.com/AaronEvangelista/mi_primera_web-con/blob/main/style.css)
 
-Mediante el uso de un **Diccionario de Traducciones** en JavaScript y la API de **LocalStorage**, el sitio web es capaz de cambiar de idioma en tiempo real sin recargar la página y recordar la preferencia del usuario indefinidamente.
-
-**Ventajas de esta estrategia:**
-* **Interactividad fluida:** Los cambios de idioma son rapidos mediante la manipulación de nodos.
-  
-* **Código Escalable:** El uso de un objeto de traducciones permite añadir nuevos idiomas o elementos de texto de forma sencilla.
-
-##  Enlaces del Proyecto
-
-- **GitHub Pages:** [https://aaronevangelista.github.io/mi_primera_web-con/](https://aaronevangelista.github.io/mi_primera_web-con/)
-- **Repositorio GitHub:** [https://github.com/AaronEvangelista/mi_primera_web-con.git](https://github.com/AaronEvangelista/mi_primera_web-con.git)
-
----
-
-##  Soluciones Implementadas: Laboratorio 8
-
-### 1. Manipulación del DOM y Diccionario de Datos
-Se ha implementado un objeto JavaScript (`translations`) donde cada clave corresponde a un `id` único en el HTML. Esto permite una localización precisa de los elementos que requieren traducción.
-
-
-
-### 2. Logica de Cambio de Idioma (Fase 3)
-Se desarrolló la función `setLanguage(lang)` que realiza las siguientes acciones:
-1. Itera sobre las claves del diccionario.
-2. Utiliza `document.getElementById()` para referenciar el nodo.
-3. Actualiza la propiedad `innerHTML` con el valor correspondiente al idioma seleccionado.
-
-```javascript
-function setLanguage(lang) {
-    for (let id in translations) {
-        const elemento = document.getElementById(id);
-        if (elemento) {
-            elemento.innerHTML = translations[id][lang];
-        }
-    }
-    savePreference(lang);
+```css
+/* Ejemplo del efecto rebote */
+.dropdown-menu {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
