@@ -1,23 +1,36 @@
-##  Soluciones Implementadas: Practica 10 (Diseño y Animación)
+# Práctica 11: jQuery - PowerTeam Videojuegos
+**Alumno:** Aaron Evangelista
+**Repositorio:** https://github.com/AaronEvangelista/mi_primera_web-con.git
 
-### 1. Estrategia Visual y Transiciones (Fase 1)
 
-**Diseño**
-use la paleta de colores se basa en un fondo oscuro profundo (`#000` y `#050505`) contrastado con un azul tipo neon.
+---
 
-Puse unas transiciones suaves para que la web se va mas atractiva  
-**Implementacion**
-* **Navegación :** Los enlaces no cambian de golpe use `transition: color 0.3s, text-shadow 0.3s` para que el brillo aparezca gradualmente.
-* **Desplegables ** Para el submenú, quería un efecto de "despliegue mecánico". En lugar de un `display: none` simple, he combinado `opacity` con `transform: translateY`.
-    * **Curva de velocidad:** He utilizado `cubic-bezier(0.175, 0.885, 0.32, 1.275)` para que tenga un rebote al final de la animacion haciendo que el menu se vea mas atractivo
+##  Detalle de las Misiones
 
-**Enlace al codigo de las transiciones:**
-[Ver implementación CSS en GitHub (Líneas 70-85 y 560-580)](https://github.com/AaronEvangelista/mi_primera_web-con/blob/main/style.css)
+### Mision 1 Selección de Elementos
 
-```css
-/* Ejemplo del efecto rebote */
-.dropdown-menu {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
+- **Etiqueta:** Cambie el color de los elementos `<small>` del footer.
+- **Clase:** Añadida transición a la clase `.social-icon`.
+- **ID:** Modifique el espaciado de letras del `#footer-titulo`.
+
+### Mision 2 Manipulación del DOM 
+- **Añadir:** utilice `.append()` para insertar juegos dinámicamente en el carrito lateral.
+- **Eliminar:** utilice `.remove()` para limpiar el carrito o quitar productos específicos.
+- **Vaciado:** use `.empty()` al finalizar la compra.
+
+### Mision 3: Gestión de Eventos
+- **Raton:** Evento `click` en los botones ".btn-add" para añadir productos.
+- **Teclado:** Implementación de la tecla **'M'** para abrir/cerrar el carrito.
+- **Formulario:** Captura del evento `submit` en el formulario de contacto con validación de campos.
+- **Use de $(this):** Para el botón de "eliminar" o "añadir" .
+
+### Mision 4: Animaciones
+- **Fade:** Uso de `.fadeIn()` al aparecer nuevos productos y `.fadeOut()` al eliminarlos.
+- **Efectos:** Uso de `.hide()` y `.show()` vinculados al evento de teclado.
+- **Animate:** Al pulsar "Pagar", el botón realiza una animación personalizada cambiando `opacity` y `letter-spacing` simultáneamente.
+
+### Mision 5: jQuery UI
+- **Plugin Sortable:** Meti en el `#carrito-container`. para que al usuario **arrastrar y reordenar** los videojuegos añadidos al carrito para priorizar su compra.
+- **Instalación:** Se han incluido los CDN de estilos y scripts de jQuery UI en el `<head>` y antes del cierre del `<body>`.
+
+---
