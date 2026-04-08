@@ -1,7 +1,7 @@
-# Práctica 13 — DAW M09 · Unidad 4 · Integracion de contenidos interactivos
+# Practica 13 — DAW M09 
 
 ## Descripción
-Integración de gráficos dinámicos, animaciones de interfaz y un canvas interactivo sobre la web **PowerTeam**, una tienda de videojuegos con tema oscuro/neón.
+animaciones de interfaz y un canvas interactivo sobre la web **PowerTeam**
 
 ---
 
@@ -17,7 +17,7 @@ Integración de gráficos dinámicos, animaciones de interfaz y un canvas intera
 
 ---
 
-## Librerías externas (CDN)
+## Librerias externas
 
 Añadir estas líneas antes del cierre de `</body>` en `index.html`, **antes** de cargar `interactividad_practica13.js`:
 
@@ -47,15 +47,15 @@ Añadir estas líneas antes del cierre de `</body>` en `index.html`, **antes** d
 
 ## Descripción de cada bloque
 
-### A · Visualización Dinámica
-- **Librería**: Chart.js v4
+### A · Visualización Dinamica
+- **Libreria**: Chart.js v4
 - **Gráfico**: Lineas con datos de ventas estimadas por juego
 - **Responsive**: Contenedor con `aspect-ratio: 16/9` y `max-width: 780px`
 - **Theming**: Paleta de colores `rgba(0,195,255)` y `rgba(0,255,180)` para que sea como el tema neon
 - **Interactividad**: Botón "Barras" botón "Líneas" y botón "Actualizar datos" genera valores aleatorios
 
 ### B · Animacion de Interfaz
-- **Librería**: Anime.js v3
+- **Libreria**: Anime.js v3
 - **Staggering**: Las tarjetas de la Biblioteca (`#proyectos .tarjeta`) arrancan invisibles y aparecen de forma escalonada
 - **Micro-interacciones**:
   - `mouseenter/mouseleave` en tarjetas en escala ligera (1.03)
