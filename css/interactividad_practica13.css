@@ -1,0 +1,88 @@
+
+.p13-chart-section {
+  padding: 2rem 0;
+}
+
+.p13-chart-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 780px;
+  aspect-ratio: 16 / 9;
+}
+
+.p13-chart-wrapper canvas {
+  width:  100% !important;
+  height: 100% !important;
+}
+
+.p13-chart-controls {
+  gap: 0.5rem;
+}
+
+.p13-btn {
+  background: transparent;
+  border: 1px solid rgba(0, 195, 255, 0.5);
+  color: rgba(0, 195, 255, 0.9);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.4rem 1.1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.p13-btn:hover {
+  background: rgba(0, 195, 255, 0.12);
+  border-color: rgba(0, 195, 255, 0.9);
+}
+
+.p13-btn--active {
+  background: rgba(0, 195, 255, 0.18);
+  border-color: rgba(0, 195, 255, 1);
+  color: #fff;
+}
+
+
+#proyectos .tarjeta {
+  will-change: transform, opacity;
+  cursor: default;
+}
+
+
+.p13-canvas-section {
+  padding: 2rem 0;
+}
+
+.p13-canvas-wrapper {
+  width: 100%;
+  max-width: 900px;
+  height: 380px;
+  border: 1px solid rgba(0, 195, 255, 0.3);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #000000;
+  cursor: crosshair;
+}
+
+#p13-particle-canvas {
+  display: block;
+  width:  100%;
+  height: 100%;
+}
+
+@media (max-width: 576px) {
+  .p13-chart-wrapper {
+    aspect-ratio: 4 / 3;
+  }
+
+  .p13-btn {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.8rem;
+  }
+
+  .p13-canvas-wrapper {
+    height: 260px;
+  }
+}

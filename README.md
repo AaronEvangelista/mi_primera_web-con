@@ -1,36 +1,71 @@
-# Práctica 11: jQuery - PowerTeam Videojuegos
-**Alumno:** Aaron Evangelista
-**Repositorio:** https://github.com/AaronEvangelista/mi_primera_web-con.git
+# Práctica 13 — DAW M09 · Unidad 4 · Integracion de contenidos interactivos
 
+## Descripción
+Integración de gráficos dinámicos, animaciones de interfaz y un canvas interactivo sobre la web **PowerTeam**, una tienda de videojuegos con tema oscuro/neón.
+
+---
+
+## Selectores HTML utilizados como anclajes
+
+| Bloque | Selector / ID | Uso |
+|--------|--------------|-----|
+| A – Gráfico | `#tabla-ejemplo` | El nuevo `<section>` del gráfico se inserta justo después de este elemento (`insertAdjacentElement('afterend', ...)`) |
+| B – Anime.js | `#proyectos .tarjeta` | Animación de entrada escalonada (staggering) y micro-interacciones hover/mousedown |
+| B – Anime.js | `.btn-add` | Micro-interacción de rebote en botones "Añadir al carrito" |
+| B – Anime.js | `.nav-link`, `.custom-btn-nav` | Micro-interacción flotante en los enlaces de navegación |
+| C – Canvas | `footer` | Se crea una nueva `<section>` con el canvas y se inserta justo antes del footer (`insertAdjacentElement('beforebegin', ...)`) |
 
 ---
 
-##  Detalle de las Misiones
+## Librerías externas (CDN)
 
-### Mision 1 Selección de Elementos
+Añadir estas líneas antes del cierre de `</body>` en `index.html`, **antes** de cargar `interactividad_practica13.js`:
 
-- **Etiqueta:** Cambie el color de los elementos `<small>` del footer.
-- **Clase:** Añadida transición a la clase `.social-icon`.
-- **ID:** Modifique el espaciado de letras del `#footer-titulo`.
+```html
 
-### Mision 2 Manipulación del DOM 
-- **Añadir:** utilice `.append()` para insertar juegos dinámicamente en el carrito lateral.
-- **Eliminar:** utilice `.remove()` para limpiar el carrito o quitar productos específicos.
-- **Vaciado:** use `.empty()` al finalizar la compra.
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
 
-### Mision 3: Gestión de Eventos
-- **Raton:** Evento `click` en los botones ".btn-add" para añadir productos.
-- **Teclado:** Implementación de la tecla **'M'** para abrir/cerrar el carrito.
-- **Formulario:** Captura del evento `submit` en el formulario de contacto con validación de campos.
-- **Use de $(this):** Para el botón de "eliminar" o "añadir" .
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
 
-### Mision 4: Animaciones
-- **Fade:** Uso de `.fadeIn()` al aparecer nuevos productos y `.fadeOut()` al eliminarlos.
-- **Efectos:** Uso de `.hide()` y `.show()` vinculados al evento de teclado.
-- **Animate:** Al pulsar "Pagar", el botón realiza una animación personalizada cambiando `opacity` y `letter-spacing` simultáneamente.
-
-### Mision 5: jQuery UI
-- **Plugin Sortable:** Meti en el `#carrito-container`. para que al usuario **arrastrar y reordenar** los videojuegos añadidos al carrito para priorizar su compra.
-- **Instalación:** Se han incluido los CDN de estilos y scripts de jQuery UI en el `<head>` y antes del cierre del `<body>`.
+<link rel="stylesheet" href="css/interactividad_practica13.css">
+<script src="js/interactividad_practica13.js"></script>
+```
 
 ---
+
+## Estructura de archivos añadidos
+
+```
+/
+├── css/
+│   └── interactividad_practica13.css
+├── js/
+│   └── interactividad_practica13.js 
+```
+
+---
+
+## Descripción de cada bloque
+
+### A · Visualización Dinámica
+- **Librería**: Chart.js v4
+- **Gráfico**: Lineas con datos de ventas estimadas por juego
+- **Responsive**: Contenedor con `aspect-ratio: 16/9` y `max-width: 780px`
+- **Theming**: Paleta de colores `rgba(0,195,255)` y `rgba(0,255,180)` para que sea como el tema neon
+- **Interactividad**: Botón "Barras" botón "Líneas" y botón "Actualizar datos" genera valores aleatorios
+
+### B · Animacion de Interfaz
+- **Librería**: Anime.js v3
+- **Staggering**: Las tarjetas de la Biblioteca (`#proyectos .tarjeta`) arrancan invisibles y aparecen de forma escalonada
+- **Micro-interacciones**:
+  - `mouseenter/mouseleave` en tarjetas en escala ligera (1.03)
+  - `mousedown/mouseup` en botones "Añadir" en efecto de pulsación con rebote
+  - `mouseenter/mouseleave` en enlaces de nav en desplazamiento vertical sutil
+- **Rendimiento**: Uso de `will-change: transform, opacity` en tarjetas para optimizar las animaciones de transformación
+
+### C · Canvas de Alto Rendimiento
+- **Elemento**: `<canvas id="p13-particle-canvas">` dentro de una sección independiente
+- **Bucle**: `requestAnimationFrame` continuo
+- **Comportamiento**: al mover el cursor sobre el panel se generan particulas azul
+- **Sin interferencias**: El canvas recibe eventos solo dentro de su propio area
+
